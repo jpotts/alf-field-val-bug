@@ -51,6 +51,7 @@
                 <property name="acme:documentId">
                     <title>Document Identification Number</title>
                     <type>d:text</type>
+                    <mandatory>true</mandatory>
                 </property>
             </properties>
             <mandatory-aspects>

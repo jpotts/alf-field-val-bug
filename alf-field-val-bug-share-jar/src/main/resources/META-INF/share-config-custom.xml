@@ -34,6 +34,14 @@
         </types>
     </config>
 
+    <config>
+        <forms>
+            <dependencies>
+                <js src="/resources/alf-field-val-bug-share-jar/js/acme-validators.js"/>
+            </dependencies>
+        </forms>
+    </config>
+
     <!--================================================================================================================
           Advanced Search Forms for types
           (search forms for aspects are not available)
@@ -228,6 +236,11 @@
                     <set id="acmeDocSet" appearance="bordered-panel" label-id="form.set.label.acme.document"/>
                     <field id="acme:documentId" label-id="form.field.label.acme.documentId" set="acmeDocSet">
                         <control template="/org/alfresco/components/form/controls/textfield.ftl"/>
+                        <constraint-handlers>
+                            <constraint type="cannotContainOne" message-id="constraint.cannotContainOne" validation-handler="ACME.forms.validation.cannotContainOne" event="onChange"/>
+                            <constraint type="cannotContainTwo" message-id="constraint.cannotContainTwo" validation-handler="ACME.forms.validation.cannotContainTwo" event="onChange"/>
+                            <constraint type="cannotContainThree" message-id="constraint.cannotContainThree" validation-handler="ACME.forms.validation.cannotContainThree" event="onChange"/>
+                        </constraint-handlers>
                     </field>
                     <field id="acme:securityClassification" label-id="form.field.label.acme.securityClassification"
                            set="acmeDocSet"/>
@@ -279,8 +292,13 @@
 
                     <!-- ACME Props appearance -->
                     <set id="acmeDocSet" appearance="bordered-panel" label-id="form.set.label.acme.document"/>
-                    <field id="acme:documentId" label-id="form.field.label.acme.documentId" set="acmeDocSet">
+                    <field id="acme:documentId" label-id="form.field.label.acme.documentId" set="acmeDocSet" description-id="form.field.description.acme.documentId" help-id="form.field.help.acme.documentId">
                         <control template="/org/alfresco/components/form/controls/textfield.ftl"/>
+                        <constraint-handlers>
+                            <constraint type="cannotContainOne" message-id="constraint.cannotContainOne" validation-handler="ACME.forms.validation.cannotContainOne" event="onChange"/>
+                            <constraint type="cannotContainTwo" message-id="constraint.cannotContainTwo" validation-handler="ACME.forms.validation.cannotContainTwo" event="onChange"/>
+                            <constraint type="cannotContainThree" message-id="constraint.cannotContainThree" validation-handler="ACME.forms.validation.cannotContainThree" event="onChange"/>
+                        </constraint-handlers>
                     </field>
                     <field id="acme:securityClassification" label-id="form.field.label.acme.securityClassification"
                            set="acmeDocSet"/>
@@ -317,8 +335,13 @@
 
                     <!-- ACME Props appearance -->
                     <set id="acmeDocSet" appearance="bordered-panel" label-id="form.set.label.acme.document"/>
-                    <field id="acme:documentId" label-id="form.field.label.acme.documentId" set="acmeDocSet">
+                    <field id="acme:documentId" label-id="form.field.label.acme.documentId" set="acmeDocSet" description-id="form.field.description.acme.documentId" help-id="form.field.help.acme.documentId">
                         <control template="/org/alfresco/components/form/controls/textfield.ftl"/>
+                        <constraint-handlers>
+                            <constraint type="cannotContainOne" message-id="constraint.cannotContainOne" validation-handler="ACME.forms.validation.cannotContainOne" event="onChange"/>
+                            <constraint type="cannotContainTwo" message-id="constraint.cannotContainTwo" validation-handler="ACME.forms.validation.cannotContainTwo" event="onChange"/>
+                            <constraint type="cannotContainThree" message-id="constraint.cannotContainThree" validation-handler="ACME.forms.validation.cannotContainThree" event="onChange"/>
+                        </constraint-handlers>
                     </field>
                     <field id="acme:securityClassification" label-id="form.field.label.acme.securityClassification"
                            set="acmeDocSet"/>
@@ -370,8 +393,13 @@
 
                     <!-- ACME Props appearance -->
                     <set id="acmeDocSet" appearance="bordered-panel" label-id="form.set.label.acme.document"/>
-                    <field id="acme:documentId" label-id="form.field.label.acme.documentId" set="acmeDocSet">
+                    <field id="acme:documentId" label-id="form.field.label.acme.documentId" set="acmeDocSet" description-id="form.field.description.acme.documentId" help-id="form.field.help.acme.documentId">
                         <control template="/org/alfresco/components/form/controls/textfield.ftl"/>
+                        <constraint-handlers>
+                            <constraint type="cannotContainOne" message-id="constraint.cannotContainOne" validation-handler="ACME.forms.validation.cannotContainOne" event="onChange"/>
+                            <constraint type="cannotContainTwo" message-id="constraint.cannotContainTwo" validation-handler="ACME.forms.validation.cannotContainTwo" event="onChange"/>
+                            <constraint type="cannotContainThree" message-id="constraint.cannotContainThree" validation-handler="ACME.forms.validation.cannotContainThree" event="onChange"/>
+                        </constraint-handlers>
                     </field>
                     <field id="acme:securityClassification" label-id="form.field.label.acme.securityClassification"
                            set="acmeDocSet"/>
@@ -406,8 +434,13 @@
 
                     <!-- ACME Props appearance -->
                     <set id="acmeDocSet" appearance="bordered-panel" label-id="form.set.label.acme.document"/>
-                    <field id="acme:documentId" label-id="form.field.label.acme.documentId" set="acmeDocSet">
+                    <field id="acme:documentId" label-id="form.field.label.acme.documentId" set="acmeDocSet" description-id="form.field.description.acme.documentId" help-id="form.field.help.acme.documentId">
                         <control template="/org/alfresco/components/form/controls/textfield.ftl"/>
+                        <constraint-handlers>
+                            <constraint type="cannotContainOne" message-id="constraint.cannotContainOne" validation-handler="ACME.forms.validation.cannotContainOne" event="onChange"/>
+                            <constraint type="cannotContainTwo" message-id="constraint.cannotContainTwo" validation-handler="ACME.forms.validation.cannotContainTwo" event="onChange"/>
+                            <constraint type="cannotContainThree" message-id="constraint.cannotContainThree" validation-handler="ACME.forms.validation.cannotContainThree" event="onChange"/>
+                        </constraint-handlers>
                     </field>
                     <field id="acme:securityClassification" label-id="form.field.label.acme.securityClassification"
                            set="acmeDocSet"/>

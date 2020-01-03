@@ -1,6 +1,14 @@
 # Alfresco AIO Project - SDK 3
 
-This is an All-In-One (AIO) project for Alfresco SDK 3.0. 
+This is an All-In-One (AIO) project for Alfresco SDK 3.0 that demonstrates a bug in Alfresco Share 5.2.6.
+
+The bug is that when a property is marked as mandatory, either in the model or in Share form configuration, it breaks
+custom field validation messages when using the doclib-simple-metadata form. The document details form is unaffected.
+
+The problem affects text fields and multi-select fields. I did not test single-select fields, but I suspect they are
+also affected.
+
+The fix is to either mark the property as optional, downgrade to 5.2.3, or upgrade to 6.x.
 
 Run with `mvn clean install -DskipTests=true alfresco:run` or `./run.sh` and verify that it 
 
