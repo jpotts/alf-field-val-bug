@@ -33,6 +33,17 @@
                 </list>
             </parameter>
         </constraint>
+        <constraint name="acme:multipleChoiceOptions" type="LIST">
+            <parameter name="allowedValues">
+                <list>
+                    <value>Choice One</value>
+                    <value>Choice Two</value>
+                    <value>Choice Three</value>
+                    <value>Choice Four</value>
+                    <value>Choice Five</value>
+                </list>
+            </parameter>
+        </constraint>
     </constraints>
 
     <!-- ===============================================================================================================
@@ -77,6 +88,26 @@
                     </index>
                     <constraints>
                         <constraint ref="acme:securityClassificationOptions"/>
+                    </constraints>
+                </property>
+            </properties>
+        </aspect>
+        <aspect name="acme:multipleChoice">
+            <title>ACME Multiple Choice</title>
+            <description>Multiple select field</description>
+            <properties>
+                <property name="acme:multipleChoice">
+                    <type>d:text</type>
+                    <mandatory>true</mandatory>
+                    <multiple>true</multiple>
+                    <default>Choice One</default>
+                    <index enabled="true">
+                        <atomic>true</atomic>
+                        <stored>false</stored>
+                        <tokenised>false</tokenised>
+                    </index>
+                    <constraints>
+                        <constraint ref="acme:multipleChoiceOptions"/>
                     </constraints>
                 </property>
             </properties>
