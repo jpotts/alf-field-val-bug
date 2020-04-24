@@ -20,6 +20,7 @@
         <aspects>
             <visible>
                 <aspect name="acme:securityClassified"/>
+                <aspect name="acme:multipleChoice"/>
             </visible>
             <addable> <!-- defaults to visible config -->
             </addable>
@@ -260,6 +261,7 @@
                     <!-- ACME custom props -->
                     <show id="acme:documentId" force="true"/>
                     <show id="acme:securityClassification"/>
+                    <show id="acme:multipleChoice"/>
                 </field-visibility>
                 <edit-form template="../documentlibrary/forms/doclib-simple-metadata.ftl"/>
                 <appearance>
@@ -302,6 +304,12 @@
                     </field>
                     <field id="acme:securityClassification" label-id="form.field.label.acme.securityClassification"
                            set="acmeDocSet"/>
+                    <field id="acme:multipleChoice" label-id="form.field.label.acme.multipleChoice" description-id="form.field.description.acme.multipleChoice" help-id="form.field.help.acme.multipleChoice">
+                       <control template="/org/alfresco/components/form/controls/selectmany.ftl" />
+                        <constraint-handlers>
+                            <constraint type="chooseTwoOrFewer" message-id="constraint.chooseTwoOrFewer" validation-handler="ACME.forms.validation.chooseTwoOrFewer" event="onChange"/>
+                        </constraint-handlers>
+                    </field>
                 </appearance>
             </form>
 
@@ -449,5 +457,21 @@
         </forms>
     </config>
 
-
+    <config condition="acme:multipleChoice" evaluator="aspect">
+        <forms>
+            <form>
+                <field-visibility>
+                    <show id="acme:multipleChoice" />
+                </field-visibility>
+                <appearance>
+                    <field id="acme:multipleChoice" label-id="form.field.label.acme.multipleChoice" description-id="form.field.description.acme.multipleChoice" help-id="form.field.help.acme.multipleChoice">
+                        <control template="/org/alfresco/components/form/controls/selectmany.ftl" />
+                        <constraint-handlers>
+                            <constraint type="chooseTwoOrFewer" message-id="constraint.chooseTwoOrFewer" validation-handler="ACME.forms.validation.chooseTwoOrFewer" event="onChange"/>
+                        </constraint-handlers>
+                    </field>
+                </appearance>
+            </form>
+        </forms>
+    </config>
 </alfresco-config>

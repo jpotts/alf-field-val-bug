@@ -40,3 +40,15 @@ ACME.forms.validation.cannotContainThree = function cannotContainThree(field, ar
         return valid;
     }
 }
+ACME.forms.validation.chooseTwoOrFewer = function chooseTwoOrFewer(field, args, event, form, silent, message) {
+    var valid = true;
+
+    valid = YAHOO.lang.trim(field.value).length !== 0;
+    if (valid) {
+        var vals = field.value.split(',');
+        if (vals.length > 2) {
+            valid = false;
+        }
+    }
+    return valid;
+}
